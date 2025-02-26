@@ -1,4 +1,4 @@
-name: build and push images
+name: Build Images
 
 on:
   push:
@@ -44,7 +44,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ github.repository }}:${{ matrix.postgres }}
+          tags: ghcr.io/${{ github.repository }}:${{ matrix.postgres }}
           build-args: |
             ALPINE_VERSION=${{ matrix.alpine }}
           platforms: |
