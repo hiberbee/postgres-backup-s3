@@ -4,6 +4,10 @@ on:
   push:
     branches: ['master']
 
+permissions:
+  packages: write
+  contents: read
+
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
